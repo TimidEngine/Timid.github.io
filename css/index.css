@@ -2,15 +2,21 @@ body, html {
     padding: 0;
     margin: 0;
     overflow: visible;
+    font-family: 'Raleway', sans-serif;
+    height:100%;
+    overflow: hidden;
 }
 
-@media only screen and (min-width:720px) {
+@media (min-width:900px) {
     .mobile {
         display:none;
     }
     
-    .fullscreen-container {
-        display:none;
+    body {
+        background-image:url("../img/code-bg.jpeg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        height:100%;
     }
     
     .nav-container {
@@ -18,7 +24,7 @@ body, html {
         position:fixed;
         top:0;
         left:0;
-        background-color:black;
+        background-color:#202020;
         display:inline-flex;
     }
 
@@ -47,21 +53,72 @@ body, html {
         display:inline-flex;
         color:white;
         margin-left:1em;
+        font-family: 'Poiret One', cursive;
     }
 
     .desktop {
         display:inherit;
-    }  
+    }
+    
+    .eye-grabber {
+        display:inline-block;
+        width:fit-content;
+        color:white;
+        position:absolute;
+        top: 0;
+        bottom:0;
+        margin:auto;
+        height:fit-content;
+    }
+    
+    .eye-grabber-title {
+        margin:0;
+        font-size:2.5em;
+        width: fit-content;
+    }
+    
+    .eye-grabber-subtitle {
+        font-size:1.3em;
+        width:fit-content;
+    }
+    
+    .active {
+        color:#888;
+    }
+    
+    .nav-element:hover {
+        text-decoration: underline;
+    }
+    
+    .eye-grabber-logo {
+        display:inline-flex;
+        width:200px;
+        height:200px;
+        position:absolute;
+        top:0;
+        bottom:0;
+        right:3em;
+        margin:auto;
+    }
+    
+    .eye-grabber-container {
+        margin-top:25%;
+        width:calc(100% - 10em);
+        position:relative;
+        left:5em;
+        right:5em;
+    }
 }
 
-@media only screen and (max-width:719px) {
+@media (max-width:899px) {
     .desktop {
         display:none;
     }
     
     .nav-top {
+        margin:0;
         width:100%;
-        background-color:black;
+        background-color:#202020;
         position:fixed;
     }    
     
@@ -70,6 +127,7 @@ body, html {
         margin-left:1em;
         padding:0.825em 0;
         color:white;
+        font-family: 'Poiret One', cursive;
     }
     
     .nav-btn {
@@ -136,4 +194,10 @@ body, html {
     .fullscreen-container:first-child {
         padding-top: 5em;
     }
+    
+    .eye-grabber {
+        display:none;
+        margin:0;
+    }
+    
 }
