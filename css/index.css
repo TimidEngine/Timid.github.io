@@ -1,91 +1,139 @@
 body, html {
-    margin:0;
     padding: 0;
+    margin: 0;
+    overflow: visible;
 }
 
-/* ------- RGB Main Color ------- */
-/* -------- 115 110 150 --------- */
+@media only screen and (min-width:720px) {
+    .mobile {
+        display:none;
+    }
+    
+    .fullscreen-container {
+        display:none;
+    }
+    
+    .nav-container {
+        width:100%;
+        position:fixed;
+        top:0;
+        left:0;
+        background-color:black;
+        display:inline-flex;
+    }
 
-.title {
-    text-align: center;
-    margin-top: 1em;
-    letter-spacing: 0.6em;
-    margin-right:-0.6em;
-    padding:0;
-    font-family: "Unica One", cursive;
-    font-size:1.8em;
+    .nav-elements {
+        width:fit-content;
+        margin:0;
+        padding:0;
+        position:absolute;
+        right:0;
+    }
+
+    .nav-element {
+        color:white;
+        padding:1.1em 0.5em;
+        display:inline-flex;
+        font-size:1.25em;
+        text-decoration: none;
+    }
+
+    .nav-elements:last-child {
+        margin-right:1em;
+    }
+
+    .nav-title {
+        width:fit-content;
+        display:inline-flex;
+        color:white;
+        margin-left:1em;
+    }
+
+    .desktop {
+        display:inherit;
+    }  
 }
 
-.navbar {
-    width:100%;
-    position:fixed;
-}
+@media only screen and (max-width:719px) {
+    .desktop {
+        display:none;
+    }
+    
+    .nav-top {
+        width:100%;
+        background-color:black;
+        position:fixed;
+    }    
+    
+    .nav-title {
+        margin:0;
+        margin-left:1em;
+        padding:0.825em 0;
+        color:white;
+    }
+    
+    .nav-btn {
+        margin: auto;
+        display:inline-block;
+        position:absolute;
+        top:0;
+        bottom:0;
+        right:1em;
+        height:35px;
+    }
+    
+    .nav-btn-layer {
+        width:30px;
+        height:5px;
+        background-color: white;
+        margin:5px 0;
+        transition: 0.4s;
+    }
+    
+    .nav-btn-change .bar1 {
+        -webkit-transform: rotate(-45deg) translate(-9px, 9px);
+        transform: rotate(-45deg) translate(-9px, 9px);
+    }
 
-.navbar .desktop {
-    width:fit-content;
-    margin:0 auto;
-    padding:0;
-}
+    .nav-btn-change .bar2 {
+        opacity: 0;
+    }
 
-.active {
-    color:white;
-    text-decoration: underline;
-    text-decoration-color: purple;
-}
-
-.navbar .desktop a {
-    display:inline-flex;
-    font-family: 'Raleway', sans-serif;
-    font-size: 1.2em;
-    text-decoration: none;
-    color:#202020;
-    padding:1.5em 1em;
-}
-
-.nav-img-container {
-    display:inline-flex;
-    width:fit-content;
-    position:relative;
-    height:100%;
-    margin:0 1em;
-}
-
-.nav-img {
-    display:inline-flex;
-    margin:0;
-    padding:0;
-}
-
-.logo-container {
-    width:fit-content;
-    margin:0 auto;
-}
-
-.home-info {
-    text-align:center;
-    font-family: 'Raleway', sans-serif;
-}
-
-.learn {
-    text-align: center;
-    padding:0.9em 1.2em;
-    margin-top:3em;
-    outline: none;
-    border:none;
-    background-color:rgb(115,110,150);
-    color:white;
-    text-decoration: none;
-    font-family: 'Raleway', sans-serif;
-    font-size: 1.3em;
-    box-shadow: 0px 0px 15px rgb(115,110,150);
-}
-
-.learn:hover {
-    color:#202020;
-}
-
-.learn-container  {
-    width:fit-content;
-    height:fit-content;
-    margin:5em auto;
+    .nav-btn-change .bar3 {
+        -webkit-transform: rotate(45deg) translate(-6px, -6px);
+        transform: rotate(45deg) translate(-6px, -6px);
+    }
+    
+    .fullscreen-container {
+        position:fixed;
+        width:100%;
+        height:100%;
+        position:absolute;
+        top:0;
+        left:0;
+        background-color:black;
+        overflow: hidden;
+        
+        /* Hide Until Changed by Navigation Button*/
+        width:0;
+        transition: 0.8s;
+    }
+    
+    .overflow {
+        overflow: hidden;
+    }
+    
+    .nav-element {
+        color:white;
+        text-decoration: none;
+        display:block;
+        width:100%;
+        text-align: center;
+        font-size: 2em;
+        padding:0.5em 0;
+    }
+    
+    .fullscreen-container:first-child {
+        padding-top: 5em;
+    }
 }

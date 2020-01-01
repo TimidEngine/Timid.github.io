@@ -1,23 +1,49 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Timid Engine</title>
+        <title>Garage Crew</title>
         <meta charset="utf-8">
         
-        <!- CSS Link-->
+        <!-CSS Links-->
         <link rel="stylesheet" href="css/index.css">
         
-        <!- Fonts Link -->
+        <!-Fonts Links-->
         <link href="https://fonts.googleapis.com/css?family=Raleway|Unica+One&display=swap" rel="stylesheet">
+        
+        <!-Icon Link-->
+        <link rel="icon" href="img/Logo.png">
     </head>
     <body>
-        <nav class="navbar">
-            <div class="nav-img-container">
-                <img src="images/Timid.png" width="50px" class="nav-img">
+        <nav class="nav-container">
+            <div class="desktop">
+                <h2 class="nav-title">Garage Crew</h2>
+                <ul class="nav-elements">
+                    <a href="index.html"         class="nav-element">Home </a>
+                    <a href="timid.html"         class="nav-element">Timid</a>
+                    <a href="javascript:void(0)" class="nav-element">About</a>
+                    <a href="learn.html"         class="nav-element">Learn</a>
+                </ul>
             </div>
-            <ul class="desktop">
-                <a href="index.html">Home</a><a href="download.html">Download</a><a class="active" href="javascript:void(0)">About</a>
-            </ul>
+            <div class="mobile">
+                <div class="fullscreen-container">
+                    <a href="index.html"         class="nav-element">Home </a>
+                    <a href="timid.html"         class="nav-element">Timid</a>
+                    <a href="javascript:void(0)" class="nav-element">About</a>
+                    <a href="learn.html"         class="nav-element">Learn</a>
+                </div>
+                <div class="nav-top">
+                    <h2 class="nav-title">Garage Crew</h2>
+                    <div class="nav-btn" onclick="openMobileNav(this)">
+                        <div class="nav-btn-layer bar1"></div>
+                        <div class="nav-btn-layer bar2"></div>
+                        <div class="nav-btn-layer bar3"></div>
+                    </div>
+                </div>
+            </div>
         </nav>
+        
+        
+        
+        <script src="js/index.js"></script>
     </body>
 </html>
