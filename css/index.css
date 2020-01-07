@@ -139,6 +139,7 @@ body, html {
         width:100%;
         background-color:#202020;
         position:fixed;
+        z-index: 2;
     }    
     
     .nav-title {
@@ -191,6 +192,9 @@ body, html {
         background-color:#202020;
         overflow: hidden;
         
+        /*Put On Top of Other Elements*/
+        z-index: 2;
+        
         /* Hide Until Changed by Navigation Button*/
         width:0;
         transition: 0.8s;
@@ -227,11 +231,13 @@ body, html {
     .eye-grabber-title {
         color:white;
         font-size:2.5em;
+        z-index:1;
     }
     
     .eye-grabber-subtitle {
         color:white;
         font-size:1.4em;
+        z-index:1;
     }
     
     .learn-btn {
